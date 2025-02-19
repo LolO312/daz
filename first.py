@@ -1,4 +1,5 @@
 import game
+from random import randint
 
 def hello():
     return int(input("Введите размер поля: "))
@@ -19,6 +20,9 @@ def main():
     map = pole(size)
     x, y = 0, 0
     map[y][x] = "x"
+    a, b = randint(1, size), randint(1, size)
+    map[b][a] = "0"
+
     while True:
         show(map)
         side = input("left, up, right, down")
