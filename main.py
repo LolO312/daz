@@ -2,7 +2,10 @@ import move
 from random import randint
 
 def hello():
-    return int(input("Введите размер поля: "))
+    a = int(input("Введите размер поля: "))
+    with open("text.txt", "w+", encoding="utf-8") as file:
+        file.write(f"Введите размер поля: '{a}'\n")
+    return a
 
 def pole(a):
     map = []
